@@ -1,7 +1,19 @@
 print("Bienvenido a Elemental Batlle")
 
-#Funcion de efectividad
+#Funcion para mostrar ataque especifico
+def asignar_ataque(tipo):
+    if tipo == "agua":
+        return "ola/polvareda"
+    elif tipo == "fuego":
+        return "rueda de fuego/polvareda"
+    elif tipo == "piedra":
+        return "pedrada/polvareda"
+    elif tipo == "planta":
+        return "lluvia floral/polvareda"
+    elif tipo == "aereo":
+        return "vendaval/polvareda"
 
+#Funcion de efectividad
 def es_efectivo(tipo,ataque):
     efectivo = 1
     if tipo == "agua" and ataque == "lluvia floral":
@@ -32,14 +44,14 @@ def danio(efectivo):
         valor_danio = 100 - 50
         return valor_danio
     
-   
+
 print("Jugador 1 - Escribe tu tipo (agua/fuego/piedra/planta/aereo): ")
 tipo_j1 = input()
 print("Jugador 2 - Escribe tu tipo (agua/fuego/piedra/planta/aereo): ")
 tipo_j2 = input()
-print("Jugador1 - Elige un ataque (ola/rueda de fuego/pedrada/lluvia floral/vendaval): ")
+print ("Jugador 1 - Escoje un ataque:", asignar_ataque(tipo_j1))
 ataque1 = input()
-print("Jugador2 - Elige un ataque (ola/rueda de fuego/pedrada/lluvia floral/vendaval): ")
+print ("Jugador 2 - Escoje un ataque:", asignar_ataque(tipo_j2))
 ataque2 = input ()
 
 #El ataque es efectivo contra t1
@@ -57,5 +69,6 @@ print("La vida de jugador 1 es: ", vidaj1)
 #Danio contra tipo2
 vidaj2= danio(efectividad_t2)
 print("La vida de jugador 2 es: ", vidaj2)
+
 
 
