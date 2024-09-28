@@ -3,17 +3,17 @@ print("Bienvenido a Elemental Batlle")
 
 #Funcion para identificar tipo
 def identificar_tipo (criatura):
-    if criatura == "wettie" or criatura == "gotin":
+    if criatura == 7 or criatura == 10 :
         return "agua"
-    elif criatura == "kandle" or criatura == "volcano":
+    elif criatura == 1 or criatura == 12 :
         return "fuego"
-    elif criatura == "vaioleta" or criatura == "grasso":
+    elif criatura == 3 or criatura == 9 :
         return "planta"
-    elif criatura == "mrplane" or criatura == "flayer":
+    elif criatura == 2 or criatura == 6 :
         return "aereo"
-    elif criatura == "rockman" or criatura == "solbrick":
+    elif criatura == 5 or criatura == 11 :
         return "piedra"
-    elif criatura == "elektro" or criatura == "rhayman":
+    elif criatura == 4 or criatura == 8:
         return "electrico"
     
 #Funcion para asignar vida de cada criatura
@@ -89,12 +89,21 @@ def danio(efectivo):
         return valor_danio
     
 #Eleccion de criatura
-print("Jugador 1 - Escoje una criatura y escribela: (volcano, flayer, grasso, elektro, solbrick,\
- mrplane, wettie, rhayman, vaioleta, gotin, rockman, kandle): ")
-criatura_j1 = input()
-print("Jugador 2 - Escoje una criatura y escribela: (volcano, flayer, grasso, elektro, solbrick,\
- mrplane, wettie, rhayman, vaioleta, gotin, rockman, kandle): ")
-criatura_j2 = input()
+seleccion_j1 = ["1-Volcano / 2-Flayer","3-Grasso / 4-Elektro", "5-Solbrick / 6-Mr.Plane","7\
+-Wettie / 8-Rhayman","9-Vaioleta / 10-Gotin", "11-Rockman / 12-Kandle"]
+for s1 in seleccion_j1:
+    print(s1)
+
+print("JUGADOR 1 - ELIGE UNA CRIATURA DE LAS ANTERIORES")
+criatura_j1 = int(input())
+
+seleccion_j2 = ["1-Volcano / 2-Flayer","3-Grasso / 4-Elektro", "5-Solbrick / 6-Mr.Plane","7\
+-Wettie / 8-Rhayman","9-Vaioleta / 10-Gotin", "11-Rockman / 12-Kandle"]
+for s2 in seleccion_j2:
+    print(s2)
+
+print("JUGADOR 1 - ELIGE UNA CRIATURA DE LAS ANTERIORES")
+criatura_j2 = int(input())
 
 
 #Identificar tipo y vida inicial
