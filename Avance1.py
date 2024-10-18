@@ -105,7 +105,7 @@ seleccion_j2 = ["1-Volcano / 2-Flayer","3-Grasso / 4-Elektro", "5-Solbrick\
 for s2 in seleccion_j2:
     print(s2)
 
-print("JUGADOR 1 - ELIGE UNA CRIATURA DE LAS ANTERIORES")
+print("JUGADOR 2 - ELIGE UNA CRIATURA DE LAS ANTERIORES")
 criatura_j2 = int(input())
 
 #Identificar tipo y vida inicial
