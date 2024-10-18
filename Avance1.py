@@ -123,8 +123,7 @@ print("La vida inicial del jugador 2 es: ", vidaj2)
 while vidaj1 >= 0 and vidaj2 >= 0:
     # Mostrar ataques disponibles y seleccionar
    
-    #Aqui utilize la funcion f-string, que permite ingresar expresiones o
-    #funciones dentro de una cadena string, esto ayuda a 
+    #Aqui utilize la funcion f-string
     print(f"Jugador 1 - Selecciona un ataque: {asignar_ataque(criatura_j1)}")
     ataque1 = int(input()) 
     print(f"Jugador 2 - Selecciona un ataque: {asignar_ataque(criatura_j2)}")
